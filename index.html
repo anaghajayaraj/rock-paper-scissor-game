@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32 (2).png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Skill Safari | Rock, Paper, Scissors</title>
+
+</head>
+<body>
+  <style>
+    .attribution{
+      font-size:11px;
+      text-align: center;
+      margin-top:4em;
+    }
+    .attribution a{
+      color:hsl(228,45%,44%);
+    }
+  </style>
+  <div id="wrapper">
+    <div class="rules-info">
+      <h2 class="rules-text">Rules</h2>
+      <img class="close" src="images/image-rules.svg" alt="rules image">
+      <img onclick="app.closeTheRules()" class="close-cross" src="images/icon-close.svg" alt="close">
+
+    </div>
+    <div class="container">
+      <header>
+        <div class="options flex-column">
+          <span>rock</span>
+          <span>paper</span>
+          <span>scissor</span>
+        </div>
+        <div class="score flex-column">
+          <span class="score-text">score</span>
+          <span id="keepScore"></span>
+        </div>
+      </header>
+      <main>
+        <div id="game-menu">
+          <div class="user-pick flex-column">
+            <h2 class="player-title">You Picked</h2>
+            <div id="user"></div>
+          </div>
+          <div id="resultDisplay">
+            <h2 id="result">who wins</h2>
+            <button id="playAgain" onclick="app.resetGame()">Play Again</button>
+          </div>
+          <div class="comp-pick flex-column">
+            <h2 class="player-title">The House Picked</h2>
+            <div id="comp" class="image-background"></div>
+          </div>
+        </div>
+        <div id="game">
+          <div class="top">
+            <img id="paper" class="paper choice" data-value="paper" src="images/icon-paper.svg" alt="paper">
+            <img id="rock" class="rock choice" data-value="rock" src="images/icon-rock.svg"alt="rock">
+          </div>
+          <div class="bottom">
+            <img id="scissors" class="scissors choice" data-value="scissor" src="images/icon-scissors.svg" alt="scissor">
+          </div>
+        </div>
+
+      </main>
+      <section class="rules" id="rulesSection">
+        <button class="rules-cta" id="rules-cta" onclick="app.openRules()">Rules</button>
+      </section>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
